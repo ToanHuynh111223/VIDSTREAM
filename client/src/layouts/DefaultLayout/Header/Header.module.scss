@@ -1,0 +1,129 @@
+$text-color: #fff;
+$text-color-active: #e50914; //can use color icon
+$main-color: #000;
+$border-color: #222;
+
+header {
+    width: 100%;
+    background-color: $main-color;
+}
+
+.container {
+    padding: 1.9rem 10rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.goHome {
+    padding: 0.5rem 0;
+    margin-right: 1.6rem;
+
+    .logo {
+        width: 16rem;
+    }
+}
+
+.listMenu {
+    color: $text-color;
+    display: flex;
+    list-style: none;
+    font-size: 1.6rem;
+    padding: 0.5rem 0;
+
+    .itemMenu {
+        margin-right: 1.8rem;
+        line-height: 3.8rem;
+        position: relative;
+        cursor: pointer;
+
+        .itemContent {
+            color: $text-color;
+            transition: all 0.3s ease-out 0s;
+
+            &:hover {
+                color: $text-color-active;
+            }
+
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 2.5rem;
+            width: 80px;
+            height: 20px;
+            background-color: transparent;
+        }
+
+        &:hover>.itemContent {
+            color: $text-color-active;
+        }
+
+        &:hover>.menuChildren {
+            display: block;
+        }
+
+        svg {
+            vertical-align: -4.5px;
+        }
+
+    }
+}
+
+.menuChildren {
+    position: absolute;
+    top: 60%;
+    display: none;
+    width: 220px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: $border-color ;
+    padding: 10px 0;
+    box-shadow: 0px 0 20px 0 rgb(0 0 0 / 50%);
+    transition: all 0.3s ease-out 0s;
+    z-index: 1;
+
+    .listMenuChildren {
+
+        list-style: none;
+        padding: 0 1.6rem;
+
+        .itemMenuChildren {
+            border-bottom: 1px dashed $text-color-active;
+            cursor: pointer;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            &:hover>a {
+                color: $text-color-active;
+                font-weight: 500;
+            }
+
+            a {
+                color: $text-color;
+                font-size: 1.6rem;
+                text-decoration: none;
+                padding: 15px 15px 15px 0;
+                transition: all 0.1s ease-out;
+
+                svg {
+                    vertical-align: 0;
+                    margin-right: 1.6rem;
+                    color: $text-color-active
+                }
+            }
+        }
+    }
+}
+
+.navbarRight {
+
+    display: flex;
+
+    button {
+        font-size: 1.2rem;
+        margin: auto;
+    }
+}
