@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import styles from './Header.module.scss';
+import styles from '../../Header.module.scss';
 import { clsx } from 'clsx';
 //import icon
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
@@ -12,6 +12,7 @@ const menuNavbar = [
     { name: 'TV SHOWS', collection: ['Show Category', 'Show Single', 'Show Details'], isMenuChildren: true },
     { name: 'MOVIES', collection: ['Movies Category', 'Movies Single', 'Movies Details'], isMenuChildren: true },
     { name: 'NEWS', collection: ['Blog', 'Blog Details'], isMenuChildren: true },
+    { name: 'ABOUT US', collection: [], isMenuChildren: false },
     { name: 'CONTACT', collection: [], isMenuChildren: false },];
 
 function NavbarHeader() {
@@ -43,7 +44,7 @@ function NavbarHeader() {
                             </li> :
                             // Not menu children
                             <li className={clsx(styles.itemMenu)} key={index} >
-                                <Link to='/contact' style={{ textDecoration: 'none' }}>
+                                <Link to={`/${item.name.toLowerCase().split(' ').join('-')}`} style={{ textDecoration: 'none' }}>
                                     <div className={clsx(styles.itemContent)}>
                                         {item.name}
                                     </div>

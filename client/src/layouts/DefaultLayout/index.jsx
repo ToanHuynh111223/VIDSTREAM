@@ -1,10 +1,12 @@
 import Header from "./Header";
 import Footer from "./Footer";
+import PageTitle from "./PageTitle";
 function DefaultLayout({ children }) {
     return (
         <>
             <Header />
-            <div className="container">
+            <PageTitle />
+            <div>
                 {children}
             </div>
             <Footer />

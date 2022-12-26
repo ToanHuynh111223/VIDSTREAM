@@ -1,5 +1,12 @@
+import styles from './Signin.module.scss'
+import clsx from 'clsx';
+import Signincontainer from './components/Signincontainer';
 function Signin() {
-    return (<h1>Signin page</h1>);
+    return (
+        <section className={clsx(styles.spacemtb)}>
+            <Signincontainer />
+        </section>
+    );
 }
 
 export default Signin;

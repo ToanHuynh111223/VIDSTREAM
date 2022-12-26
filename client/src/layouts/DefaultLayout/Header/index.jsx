@@ -4,10 +4,10 @@ import { clsx } from 'clsx';
 //import material-ui
 import { Button } from "@mui/material";
 import { ThemeProvider } from '@mui/material/styles';
-//add theme
+//add theme mui
 import useColorMaterial, { theme } from "../../../hooks/useColorMaterial";
 //import component list menu (header)
-import NavbarHeader from "./NavbarHeader";
+import NavbarHeader from "./components/NavbarHeader";
 
 function Header() {
     const loginColor = useColorMaterial('login')
@@ -20,7 +20,9 @@ function Header() {
                 <NavbarHeader />
                 <div className={clsx(styles.navbarRight)}>
                     <ThemeProvider theme={theme}>
-                        <Button variant="outlined" size="large" color={loginColor}>Login</Button>
+                        <Link to='/login'>
+                            <Button variant="outlined" size="large" color={loginColor}> Login </Button>
+                        </Link>
                     </ThemeProvider>
 
                 </div>

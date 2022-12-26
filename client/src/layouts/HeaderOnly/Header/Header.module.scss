@@ -122,8 +122,13 @@ header {
 
     display: flex;
 
+    a {
+        margin: auto;
+        text-decoration: none;
+    }
+
     button {
         font-size: 1.2rem;
-        margin: auto;
+
     }
 }

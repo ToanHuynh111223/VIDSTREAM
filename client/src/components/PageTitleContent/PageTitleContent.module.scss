@@ -1,0 +1,35 @@
+$text-color: #fff;
+$text-color-active: #e50914; //can use color icon
+$main-color: #000;
+$border-color: #222;
+
+.content {
+    position: absolute;
+    width: 100%;
+    padding: 14rem 10rem 6rem;
+    z-index: 2;
+
+    h2 {
+        font-size: 3.8rem;
+        font-weight: 600;
+        color: $text-color;
+        line-height: 1.2;
+    }
+
+    .breadcrumb {
+        display: flex;
+        line-height: 1.2;
+        font-weight: 500;
+        font-size: 1.6rem;
+        padding: 1.2rem 1.6rem 1.2rem 0;
+
+        span {
+            padding-right: 0.8rem;
+            color: $text-color
+        }
+
+        p {
+            color: $text-color-active
+        }
+    }
+}

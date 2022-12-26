@@ -20,7 +20,9 @@ function Header() {
                 <NavbarHeader />
                 <div className={clsx(styles.navbarRight)}>
                     <ThemeProvider theme={theme}>
-                        <Button variant="outlined" size="large" color={loginColor}>Login</Button>
+                        <Link to='/signin'>
+                            <Button variant="outlined" size="large" color={loginColor}> Login </Button>
+                        </Link>
                     </ThemeProvider>
 
                 </div>
