@@ -18,5 +18,5 @@ function PageTitleContent() {
         </div>
     );
 }
-// title.charAt(0).toUpperCase() + title.slice(1).toLowerCase()
+
 export default PageTitleContent;
