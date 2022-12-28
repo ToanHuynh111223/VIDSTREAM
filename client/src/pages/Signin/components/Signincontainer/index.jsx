@@ -5,8 +5,9 @@ import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
 import { ThemeProvider } from '@mui/material/styles';
 //add hooks theme mui
-import useColorMaterial, { theme } from "../../../../hooks/useColorMaterial";
-import { useRef, useState } from "react";
+import useColorMaterial, { theme } from "../../../../hooks/UseColorMaterial/useColorMaterial";
+//hooks react
+import { useEffect, useRef, useState } from "react";
 /* eslint-disable */
 const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
 function SigninContainer() {
@@ -15,6 +16,10 @@ function SigninContainer() {
     const [inputPassword, setInputPassword] = useState('')
     const email = useRef()
     const password = useRef()
+    //scroll page when mount
+    useEffect(() => {
+        window.scrollTo(0, 390)
+    }, [])
     //Submit err when input === " "
     function onClickSubmit() {
         if (!inputEmail || !inputPassword) {
@@ -39,11 +44,13 @@ function SigninContainer() {
                 <form className={clsx(styles.form)} action="#">
                     <div className={clsx(styles.formgroup)}>
                         <label>Email</label>
-                        <input ref={email} type="text" placeholder='Enter email' autoComplete="email" value={inputEmail} onChange={(e) => setInputEmail(e.target.value)} />
+                        <input ref={email} type="text" placeholder='Enter email' autoComplete="email"
+                            value={inputEmail} onChange={(e) => setInputEmail(e.target.value)} />
                     </div>
                     <div className={clsx(styles.formgroup)}>
                         <label>Password</label>
-                        <input ref={password} type="password" placeholder='Password' autoComplete="current-password" value={inputPassword} onChange={(e) => setInputPassword(e.target.value)}
+                        <input ref={password} type="password" placeholder='Password' autoComplete="current-password"
+                            value={inputPassword} onChange={(e) => setInputPassword(e.target.value)}
                         />
                     </div>
                 </form>

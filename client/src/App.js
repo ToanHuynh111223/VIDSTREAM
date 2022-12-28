@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { Fragment } from 'react';
 import DefaultLayout from './layouts/DefaultLayout';
 import { publicRoutes } from './routes';
+import PageNotFound from './pages/PageNotFound';
 function App() {
   return (
     <Router>
@@ -10,8 +11,9 @@ function App() {
         <Routes>
           {
             publicRoutes.map((route, index) => {
-              const Page = route.component;
+              const Page = route.component ? route.component : PageNotFound;
               let Layout = DefaultLayout;
+              const path = route.path ? route.path : "*"
               if (route.layout) {
                 Layout = route.layout
               }
@@ -21,7 +23,7 @@ function App() {
               return (
                 <Route
                   key={index}
-                  path={route.path}
+                  path={path}
                   element={
                     <Layout>
                       <Page />
