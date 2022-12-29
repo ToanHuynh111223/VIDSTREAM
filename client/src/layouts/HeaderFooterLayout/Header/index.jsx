@@ -15,7 +15,7 @@ function Header() {
         <header>
             <div className={clsx(styles.container)}>
                 <Link to='/' className={clsx(styles.goHome)}>
-                    <img className={clsx(styles.logo)} src="./assets/logo/logo.png" alt="logo"></img>
+                    <img className={clsx(styles.logo)} src="../../assets/logo/logo.png" alt="logo"></img>
                 </Link>
                 <NavbarHeader />
                 <div className={clsx(styles.navbarRight)}>

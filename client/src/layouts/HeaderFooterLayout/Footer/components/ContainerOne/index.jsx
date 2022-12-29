@@ -45,7 +45,7 @@ function ContainerOne() {
     return (
         <Row>
             <Col className={clsx(styles.colstart)}>
-                <img className={clsx(styles.logo)} src="./assets/logo/logo.png" alt="logo"></img>
+                <img className={clsx(styles.logo)} src="../../assets/logo/logo.png" alt="logo"></img>
                 <p className={clsx(styles.pleft)}>
                     It is a long established fact that a reader will be distracted by the readable content of a page
                     when looking at its layout.</p>
@@ -71,23 +71,23 @@ function ContainerOne() {
                         About Us
                     </Link>
                     </li>
-                    <li><Link to="/about-us">
+                    <li><Link to="/*">
                         Movies
                     </Link>
                     </li>
-                    <li><Link to="/about-us">
+                    <li><Link to="/*">
                         Tv Shows
                     </Link>
                     </li>
-                    <li><Link to="/about-us">
+                    <li><Link to="/*">
                         Privacy Policy
                     </Link>
                     </li>
-                    <li><Link to="/about-us">
+                    <li><Link to="/*">
                         Terms & Conditions
                     </Link>
                     </li>
-                    <li><Link to="/about-us">
+                    <li><Link to="/*">
                         Help
                     </Link>
                     </li>
@@ -96,11 +96,11 @@ function ContainerOne() {
             <Col className={clsx(styles.colcenter)}>
                 <h2 className={clsx(styles.title)}>Important Link</h2>
                 <ul>
-                    <li><Link to="/about-us">
+                    <li><Link to="/*">
                         Support
                     </Link>
                     </li>
-                    <li><Link to="/about-us">
+                    <li><Link to="/*">
                         FAQ
                     </Link>
                     </li>
@@ -108,11 +108,11 @@ function ContainerOne() {
                         Contact Us
                     </Link>
                     </li>
-                    <li><Link to="/about-us">
+                    <li><Link to="/*">
                         Latest News
                     </Link>
                     </li>
-                    <li><Link to="/about-us">
+                    <li><Link to="/*">
                         Pricing Plan
                     </Link>
                     </li>

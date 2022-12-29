@@ -33,7 +33,7 @@ function NavbarHeader() {
                                         {item.collection.map((collect, index) => {
                                             return (
                                                 <li className={clsx(styles.itemMenuChildren)} key={index}>
-                                                    <Link to={`${collect.toLowerCase().replace(' ', '-')}`}>
+                                                    <Link to={`/${collect.toLowerCase().replace(' ', '-')}`}>
                                                         <RadioButtonCheckedIcon />
                                                         {collect}
                                                     </Link>

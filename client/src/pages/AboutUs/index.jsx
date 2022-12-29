@@ -13,7 +13,7 @@ function AboutUs() {
         window.scrollTo(0, 0)
     })
     return (
-        <div className={clsx(styles.container)}>
+        <div className={clsx(styles.wrapper)}>
             <Container>
                 <Row className={clsx(styles.row)}>
                     <Col className={clsx(styles.left)}>

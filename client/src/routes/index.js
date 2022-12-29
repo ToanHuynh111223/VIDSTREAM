@@ -10,6 +10,7 @@ import Contact from "../pages/Contact"
 import AboutUs from "../pages/AboutUs"
 import ResetPassword from "../pages/ResetPassword"
 import PageNotFound from "../pages/PageNotFound"
+import Blog from "../pages/Blog"
 export const publicRoutes = [
     { path: '/', component: Home, layout: null },
     { path: '/login', component: Signin },
@@ -17,6 +18,7 @@ export const publicRoutes = [
     { path: '/contact', component: Contact },
     { path: '/about-us', component: AboutUs },
     { path: '/reset-password', component: ResetPassword },
+    { path: '/blog', component: Blog },
     { path: '*', component: PageNotFound, layout: HeaderFooterLayout },
     { path: '/myprofile', component: MyProfile, layout: HeaderOnly }
 

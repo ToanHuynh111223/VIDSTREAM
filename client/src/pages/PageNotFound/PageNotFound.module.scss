@@ -1,0 +1,42 @@
+$text-color: #fff;
+$text-color-active: #e50914; //can use color icon
+$main-color: #000;
+$border-color: #222;
+
+.wrapper {
+    margin: 10rem 0;
+    text-align: center;
+
+    h1 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 16rem;
+        font-weight: 700;
+        color: $text-color-active;
+    }
+
+    h2 {
+        font-size: 3rem;
+        font-weight: 600;
+        color: $text-color;
+    }
+
+    P {
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: $text-color;
+        margin: 0.8rem 0 1.6rem;
+    }
+
+    a {
+        text-decoration: none;
+
+
+        button {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: $text-color;
+            border-radius: 5rem;
+            padding: 0.9rem 3rem;
+        }
+    }
+}

@@ -55,7 +55,7 @@ function Contact() {
         }
     }
     return (
-        <div className={clsx(styles.container)}>
+        <div className={clsx(styles.wrapper)}>
             <Container>
                 <Row className={clsx(styles.row)}>
                     <Col className={clsx(styles.left)}>
@@ -65,7 +65,7 @@ function Contact() {
                                 <LocationOnIcon sx={{ fontSize: 30 }} />
                                 <h2>Address</h2>
                             </div>
-                            <p>2215 Skinner Hollow Road,Medford,USA</p>
+                            <p>2215 Skinner Hollow Road, Medford, USA</p>
                         </div>
                         <div className={clsx(styles.infocontact)}>
                             <div className={clsx(styles.title)}>
