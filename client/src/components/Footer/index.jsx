@@ -17,7 +17,6 @@ function Footer() {
                     <ContainerTwo />
                 </div>
             </Container>
-
         </footer >
     );
 }

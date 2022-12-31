@@ -12,7 +12,7 @@ import ResetPassword from "../pages/ResetPassword"
 import PageNotFound from "../pages/PageNotFound"
 import Blog from "../pages/Blog"
 export const publicRoutes = [
-    { path: '/', component: Home, layout: null },
+    { path: '/', component: Home, layout: HeaderFooterLayout },
     { path: '/login', component: Signin },
     { path: '/register', component: Signup },
     { path: '/contact', component: Contact },

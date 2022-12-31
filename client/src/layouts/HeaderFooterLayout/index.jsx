@@ -1,5 +1,4 @@
-import Header from "./Header";
-import Footer from "./Footer";
+import { Header, Footer } from "../../components";
 function HeaderFooterLayout({ children }) {
     return (
         <>

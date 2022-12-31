@@ -3,7 +3,7 @@ import styles from "./PageTitle.module.scss"
 import { clsx } from 'clsx';
 
 //import component page-title-content
-import PageTitleContent from "../../../components/PageTitleContent";
+import { PageTitleContent } from "../../../components";
 function PageTitle() {
     return (
         <section className={clsx(styles.pageheaderbox)} >
