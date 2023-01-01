@@ -5,7 +5,7 @@ function DefaultLayout({ children }) {
         <>
             <Header />
             <PageTitle />
-            <div>
+            <div style={{ margin: "100px 0" }}>
                 {children}
             </div>
             <Footer />

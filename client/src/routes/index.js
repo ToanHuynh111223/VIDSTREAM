@@ -1,20 +1,22 @@
 //import layout
-import HeaderOnly from "../layouts/HeaderOnly"
-import HeaderFooterLayout from "../layouts/HeaderFooterLayout"
-
-import Home from "../pages/Home"
-import Signin from "../pages/Signin"
-import Signup from "../pages/Signup"
-import MyProfile from "../pages/MyProfile"
-import Contact from "../pages/Contact"
-import AboutUs from "../pages/AboutUs"
-import ResetPassword from "../pages/ResetPassword"
-import PageNotFound from "../pages/PageNotFound"
-import Blog from "../pages/Blog"
+import HeaderOnly from "../layouts/HeaderOnly";
+import HeaderFooterLayout from "../layouts/HeaderFooterLayout";
+//import all page
+import {
+    Home,
+    AboutUs,
+    Blog,
+    Contact,
+    MyProfile,
+    PageNotFound,
+    ResetPassword,
+    SignIn,
+    SignUp
+} from "../pages"
 export const publicRoutes = [
     { path: '/', component: Home, layout: HeaderFooterLayout },
-    { path: '/login', component: Signin },
-    { path: '/register', component: Signup },
+    { path: '/login', component: SignIn },
+    { path: '/register', component: SignUp },
     { path: '/contact', component: Contact },
     { path: '/about-us', component: AboutUs },
     { path: '/reset-password', component: ResetPassword },

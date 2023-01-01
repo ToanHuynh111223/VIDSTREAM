@@ -5,7 +5,7 @@ import clsx from 'clsx';
 import { Button } from "@mui/material";
 import { ThemeProvider } from '@mui/material/styles';
 //add hooks theme mui
-import useColorMaterial, { theme } from '../../hooks/UseColorMaterial/useColorMaterial';
+import useColorMaterial, { theme } from '../../hooks/useColorMaterial.js';
 // Bootstrap CSS
 import "bootstrap/dist/css/bootstrap.min.css";
 import Container from 'react-bootstrap/Container';
@@ -55,80 +55,78 @@ function Contact() {
         }
     }
     return (
-        <div className={clsx(styles.wrapper)}>
-            <Container>
-                <Row className={clsx(styles.row)}>
-                    <Col className={clsx(styles.left)}>
-                        <h1>Get In Touch</h1>
-                        <div className={clsx(styles.infocontact)}>
-                            <div className={clsx(styles.title)}>
-                                <LocationOnIcon sx={{ fontSize: 30 }} />
-                                <h2>Address</h2>
-                            </div>
-                            <p>2215 Skinner Hollow Road, Medford, USA</p>
+        <Container>
+            <Row className={clsx(styles.row)}>
+                <Col className={clsx(styles.left)}>
+                    <h1>Get In Touch</h1>
+                    <div className={clsx(styles.infocontact)}>
+                        <div className={clsx(styles.title)}>
+                            <LocationOnIcon sx={{ fontSize: 30 }} />
+                            <h2>Address</h2>
                         </div>
-                        <div className={clsx(styles.infocontact)}>
-                            <div className={clsx(styles.title)}>
-                                <PhoneIcon sx={{ fontSize: 30 }} />
-                                <h2>Phone</h2>
-                            </div>
-                            <p>(+1) 123 6547 7894</p>
+                        <p>2215 Skinner Hollow Road, Medford, USA</p>
+                    </div>
+                    <div className={clsx(styles.infocontact)}>
+                        <div className={clsx(styles.title)}>
+                            <PhoneIcon sx={{ fontSize: 30 }} />
+                            <h2>Phone</h2>
                         </div>
-                        <div className={clsx(styles.infocontact)}>
-                            <div className={clsx(styles.title)}>
-                                <EmailIcon sx={{ fontSize: 30 }} />
-                                <h2>Email</h2>
-                            </div>
-                            <p>example@gmail.com</p>
+                        <p>(+1) 123 6547 7894</p>
+                    </div>
+                    <div className={clsx(styles.infocontact)}>
+                        <div className={clsx(styles.title)}>
+                            <EmailIcon sx={{ fontSize: 30 }} />
+                            <h2>Email</h2>
                         </div>
-                    </Col>
-                    <Col className={clsx(styles.right)} xs={8}>
-                        <h1>Send Your Message</h1>
-                        <form action='#'>
-                            <Row className={clsx(styles.sectionOne)}>
-                                <Col>
-                                    <div className={clsx(styles.formgroup)}>
-                                        <label>Name</label>
-                                        <input ref={userName} placeholder="Enter your name" autoComplete="name"
-                                            value={inputUserName} onChange={(e) => setInputUserName(e.target.value)} />
-                                    </div>
-                                </Col>
-                                <Col>
-                                    <div className={clsx(styles.formgroup)}>
-                                        <label>Email</label>
-                                        <input ref={email} placeholder="Enter your Email" autoComplete="email"
-                                            value={inputEmail} onChange={(e) => setInputEmail(e.target.value)} />
-                                    </div>
-                                </Col>
-                            </Row>
-                            <Row className={clsx(styles.sectionTwo)}>
-                                <Col>
-                                    <div className={clsx(styles.formgroup)}>
-                                        <label>Subject</label>
-                                        <input ref={subject} placeholder="Enter your Subject" autoComplete="Subject"
-                                            value={inputSubject} onChange={(e) => setInputSubject(e.target.value)} />
-                                    </div>
-                                </Col>
-                            </Row>
-                            <Row className={clsx(styles.sectionThree)}>
-                                <Col>
-                                    <div className={clsx(styles.formgroup)}>
-                                        <label>Message</label>
-                                        {/* <input placeholder="Enter your Message" autoComplete="message"></input> */}
-                                        <textarea ref={message} cols="30" rows="4" placeholder="Enter your Message"
-                                            value={inputMessage} onChange={(e) => setInputMessage(e.target.value)} />
-                                    </div>
-                                </Col>
-                            </Row>
-                            <ThemeProvider theme={theme}>
-                                <Button variant="contained" size="large" color={loginColor} onClick={onClickSendMessage}> Send Message </Button>
-                            </ThemeProvider>
-                        </form>
-                    </Col>
-                </Row>
+                        <p>example@gmail.com</p>
+                    </div>
+                </Col>
+                <Col className={clsx(styles.right)} xs={8}>
+                    <h1>Send Your Message</h1>
+                    <form action='#'>
+                        <Row className={clsx(styles.sectionOne)}>
+                            <Col>
+                                <div className={clsx(styles.formgroup)}>
+                                    <label>Name</label>
+                                    <input ref={userName} placeholder="Enter your name" autoComplete="name"
+                                        value={inputUserName} onChange={(e) => setInputUserName(e.target.value)} />
+                                </div>
+                            </Col>
+                            <Col>
+                                <div className={clsx(styles.formgroup)}>
+                                    <label>Email</label>
+                                    <input ref={email} placeholder="Enter your Email" autoComplete="email"
+                                        value={inputEmail} onChange={(e) => setInputEmail(e.target.value)} />
+                                </div>
+                            </Col>
+                        </Row>
+                        <Row className={clsx(styles.sectionTwo)}>
+                            <Col>
+                                <div className={clsx(styles.formgroup)}>
+                                    <label>Subject</label>
+                                    <input ref={subject} placeholder="Enter your Subject" autoComplete="Subject"
+                                        value={inputSubject} onChange={(e) => setInputSubject(e.target.value)} />
+                                </div>
+                            </Col>
+                        </Row>
+                        <Row className={clsx(styles.sectionThree)}>
+                            <Col>
+                                <div className={clsx(styles.formgroup)}>
+                                    <label>Message</label>
+                                    {/* <input placeholder="Enter your Message" autoComplete="message"></input> */}
+                                    <textarea ref={message} cols="30" rows="4" placeholder="Enter your Message"
+                                        value={inputMessage} onChange={(e) => setInputMessage(e.target.value)} />
+                                </div>
+                            </Col>
+                        </Row>
+                        <ThemeProvider theme={theme}>
+                            <Button variant="contained" size="large" color={loginColor} onClick={onClickSendMessage}> Send Message </Button>
+                        </ThemeProvider>
+                    </form>
+                </Col>
+            </Row>
 
-            </Container>
-        </div>
+        </Container>
     );
 }
 

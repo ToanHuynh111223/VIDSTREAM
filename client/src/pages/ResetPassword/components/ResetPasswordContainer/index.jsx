@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import { Button } from "@mui/material";
 import { ThemeProvider } from '@mui/material/styles';
 //add hooks theme mui
-import useColorMaterial, { theme } from "../../../../hooks/UseColorMaterial/useColorMaterial";
+import useColorMaterial, { theme } from "../../../../hooks/useColorMaterial.js";
 //hooks react
 import { useEffect, useState, useRef } from "react";
 /* eslint-disable */

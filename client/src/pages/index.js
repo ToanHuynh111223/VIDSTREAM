@@ -1,0 +1,10 @@
+export { default as AboutUs } from './AboutUs';
+export { default as Home } from './Home'
+export { default as Contact } from './Contact';
+export { default as Genres } from './Genres';
+export { default as Blog } from './Blog';
+export { default as MyProfile } from './MyProfile';
+export { default as PageNotFound } from './PageNotFound';
+export { default as ResetPassword } from './ResetPassword';
+export { default as SignIn } from './SignIn';
+export { default as SignUp } from './SignUp';

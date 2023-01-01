@@ -3,7 +3,7 @@
         {
             "id": 1,
             "title": "It is a long established fact that a reader",
-            "img": "./public/assets/blogs/01.jpg",
+            "img": "https://themes.themewild.com/vidstream/assets/images/blog/01.jpg",
             "day": 23,
             "month": "August",
             "year": 2022,
@@ -13,7 +13,7 @@
         {
             "id": 2,
             "title": "It is a long established fact that a reader",
-            "img": "./public/assets/blogs/02.jpg",
+            "img": "https://themes.themewild.com/vidstream/assets/images/blog/02.jpg",
             "day": 23,
             "month": "August",
             "year": 2022,
@@ -23,7 +23,7 @@
         {
             "id": 3,
             "title": "It is a long established fact that a reader",
-            "img": "./public/assets/blogs/03.jpg",
+            "img": "https://themes.themewild.com/vidstream/assets/images/blog/03.jpg",
             "day": 23,
             "month": "August",
             "year": 2022,
@@ -33,7 +33,7 @@
         {
             "id": 4,
             "title": "It is a long established fact that a reader",
-            "img": "./public/assets/blogs/04.jpg",
+            "img": "https://themes.themewild.com/vidstream/assets/images/blog/04.jpg",
             "day": 23,
             "month": "August",
             "year": 2022,
@@ -43,7 +43,7 @@
         {
             "id": 5,
             "title": "It is a long established fact that a reader",
-            "img": "./public/assets/blogs/05.jpg",
+            "img": "https://themes.themewild.com/vidstream/assets/images/blog/05.jpg",
             "day": 23,
             "month": "August",
             "year": 2022,
@@ -53,7 +53,7 @@
         {
             "id": 6,
             "title": "It is a long established fact that a reader",
-            "img": "./public/assets/blogs/06.jpg",
+            "img": "https://themes.themewild.com/vidstream/assets/images/blog/06.jpg",
             "day": 23,
             "month": "August",
             "year": 2022,

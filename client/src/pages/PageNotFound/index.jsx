@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
 import { ThemeProvider } from '@mui/material/styles';
 //add hooks theme mui
-import useColorMaterial, { theme } from '../../hooks/UseColorMaterial/useColorMaterial';
+import useColorMaterial, { theme } from '../../hooks/useColorMaterial.js';
 // Bootstrap CSS
 import "bootstrap/dist/css/bootstrap.min.css";
 import Container from 'react-bootstrap/Container';

@@ -1,7 +1,7 @@
-import styles from './Signin.module.scss'
+import styles from './SignIn.module.scss'
 import clsx from 'clsx';
 import SigninContainer from './components/SigninContainer';
-function Signin() {
+function SignIn() {
     return (
         <section className={clsx(styles.spacemtb)}>
             <SigninContainer />
@@ -9,4 +9,4 @@ function Signin() {
     );
 }
 
-export default Signin;
+export default SignIn;

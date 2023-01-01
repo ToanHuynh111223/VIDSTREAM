@@ -1,6 +1,7 @@
 import styles from "../../Footer.module.scss"
 import clsx from 'clsx';
 import { Link } from "react-router-dom";
+import { logo } from "../../../../assets";
 //import icon mui
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -16,7 +17,7 @@ import Col from 'react-bootstrap/Col';
 import { Button } from "@mui/material";
 import { ThemeProvider } from '@mui/material/styles';
 //add hooks theme mui
-import useColorMaterial, { theme } from "../../../../hooks/UseColorMaterial/useColorMaterial";
+import useColorMaterial, { theme } from "../../../../hooks/useColorMaterial.js";
 import { useRef, useState } from "react";
 /* eslint-disable */
 const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
@@ -45,7 +46,7 @@ function ContainerOne() {
     return (
         <Row>
             <Col className={clsx(styles.colstart)}>
-                <img className={clsx(styles.logo)} src="/assets/logo/logo.png" alt="logo"></img>
+                <img className={clsx(styles.logo)} src={logo} alt="logo"></img>
                 <p className={clsx(styles.pleft)}>
                     It is a long established fact that a reader will be distracted by the readable content of a page
                     when looking at its layout.</p>

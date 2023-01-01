@@ -1,7 +1,7 @@
 import styles from './PageTitleContent.module.scss'
 import { clsx } from 'clsx';
 import { useLocation } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, memo } from 'react';
 function PageTitleContent() {
     const [title, setTitle] = useState('')
     let { pathname } = useLocation()
@@ -19,4 +19,4 @@ function PageTitleContent() {
     );
 }
 
-export default PageTitleContent;
+export default memo(PageTitleContent);

@@ -1,11 +1,11 @@
-import styles from "../../Signup.module.scss"
+import styles from "../../SignUp.module.scss"
 import clsx from 'clsx';
 import { Link } from "react-router-dom";
 //import material-ui
 import { Button } from "@mui/material";
 import { ThemeProvider } from '@mui/material/styles';
 //add hooks theme mui
-import useColorMaterial, { theme } from "../../../../hooks/UseColorMaterial/useColorMaterial";
+import useColorMaterial, { theme } from "../../../../hooks/useColorMaterial.js";
 //hooks react
 import { useEffect, useRef, useState } from "react";
 /* eslint-disable */
@@ -63,7 +63,7 @@ function SignupContainer() {
                 </form>
                 <div className={clsx(styles.info)}>
                     <div className={clsx(styles.checkbox)}>
-                        <input type="checkbox" />
+                        <input type="checkbox" id="customCheck" />
                         <label htmlFor="customCheck">I accept
                             <Link to="#">
                                 Terms and Conditions
