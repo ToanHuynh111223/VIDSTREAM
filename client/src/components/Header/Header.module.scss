@@ -8,6 +8,13 @@ header {
     background-color: $main-color;
 }
 
+.scrollAnimation {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    animation: slideInDown 1s both;
+}
+
 .container {
     padding: 1.9rem 10rem;
     display: flex;
@@ -130,5 +137,18 @@ header {
     button {
         font-size: 1.2rem;
 
+    }
+}
+
+@keyframes slideInDown {
+    0% {
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+        visibility: visible
+    }
+
+    to {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
     }
 }

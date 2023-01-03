@@ -3,7 +3,7 @@ import clsx from 'clsx';
 function ContainerTwo() {
     return (
         <div className={clsx(styles.footerend)}>
-            <p>VIDSTREAM - 2022 All Rights Reserved.</p>
+            <p style={{ fontFamily: "'Roboto', sans-serif" }}>VIDSTREAM - 2023 All Rights Reserved.</p>
         </div>
     );
 }

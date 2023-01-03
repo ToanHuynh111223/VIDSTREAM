@@ -13,10 +13,10 @@ function PageTitleContent() {
 
     return (
         <div className={clsx(styles.content)}>
-            <h2>{title.charAt(1).toUpperCase() + title.slice(2, title.indexOf('/', 2)).toLowerCase().replace('-', ' ')}</h2>
+            <h2>{title.charAt(1).toUpperCase() + title.slice(2, title.indexOf('/', 2) < 0 ? title.length : title.indexOf('/', 2)).toLowerCase().replace('-', ' ')}</h2>
             <div className={clsx(styles.breadcrumb)}>
                 <span>Home</span>
-                <p><span>/</span>{title.charAt(1).toUpperCase() + title.slice(2, title.indexOf('/', 2)).toLowerCase().replace('-', ' ')}</p>
+                <p><span>/</span>{title.charAt(1).toUpperCase() + title.slice(2, title.indexOf('/', 2) < 0 ? title.length : title.indexOf('/', 2)).toLowerCase().replace('-', ' ')}</p>
             </div>
         </div>
     );

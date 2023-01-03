@@ -3,6 +3,7 @@ import styles from "./Blog.module.scss";
 import clsx from "clsx";
 import { Link } from "react-router-dom";
 
+//import layout bootstrap
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';

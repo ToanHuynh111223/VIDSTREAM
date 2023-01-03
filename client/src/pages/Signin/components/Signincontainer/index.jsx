@@ -18,7 +18,7 @@ function SigninContainer() {
     const password = useRef()
     //scroll page when mount
     useEffect(() => {
-        window.scrollTo(0, 390)
+        window.scrollTo(0, 280)
     }, [])
     //Submit err when input === " "
     function onClickSubmit() {

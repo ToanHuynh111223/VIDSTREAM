@@ -14,7 +14,7 @@ function ResetPasswordContainer() {
     const [inputEmail, setInputEmail] = useState('')
     const email = useRef()
     useEffect(() => {
-        window.scrollTo(0, 340)
+        window.scrollTo(0, 200)
     }, [])
     //Reset err when input === " "
     function onClickReset() {

@@ -20,7 +20,7 @@ function SignupContainer() {
     const userName = useRef()
     //scroll page when mount
     useEffect(() => {
-        window.scrollTo(0, 400)
+        window.scrollTo(0, 300)
     }, [])
     //Register err when input === " "
     function onClickRegister() {
