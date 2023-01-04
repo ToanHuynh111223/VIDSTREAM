@@ -148,3 +148,16 @@ footer {
         font-weight: 400;
     }
 }
+
+//responsive 
+@media only screen and (min-width: 780px) and (max-width: 1024px) {
+    .colend {
+        margin-bottom: 1.6rem;
+    }
+}
+
+@media only screen and (min-width: 440px) and (max-width: 779px) {
+    .colend {
+        margin-bottom: 1.6rem;
+    }
+}

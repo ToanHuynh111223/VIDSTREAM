@@ -4,11 +4,9 @@ import { clsx } from 'clsx';
 //import icon
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
-
-
 // list navbar
 const menuNavbar = [
-    { name: 'HOME', collection: ['Home One', 'Home Two', 'Home Three'], isMenuChildren: true },
+    { name: 'HOME', collection: [], isMenuChildren: false, isHome: true },
     { name: 'GENRES', collection: ['Action', 'Comedy', 'Documentary', 'Fantase', 'Horror', 'Drama', 'Music'], isMenuChildren: true },
     { name: 'TV SHOWS', collection: ['Show Category', 'Show Single', 'Show Details'], isMenuChildren: true },
     { name: 'MOVIES', collection: ['Movies Category', 'Movies Single', 'Movies Details'], isMenuChildren: true },
@@ -45,7 +43,7 @@ function NavbarHeader() {
                             </li> :
                             // Not menu children
                             <li className={clsx(styles.itemMenu)} key={index} >
-                                <Link to={`/${item.name.toLowerCase().split(' ').join('-')}`} style={{ textDecoration: 'none' }}>
+                                <Link to={item.isHome ? "/" : `/${item.name.toLowerCase().split(' ').join('-')}`} style={{ textDecoration: 'none' }}>
                                     <div className={clsx(styles.itemContent)}>
                                         {item.name}
                                     </div>

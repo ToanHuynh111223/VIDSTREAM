@@ -9,11 +9,13 @@ import { ThemeProvider } from '@mui/material/styles';
 import useColorMaterial, { theme } from "../../hooks/useColorMaterial.js";
 //import component list menu (header)
 import NavbarHeader from "./components/NavbarHeader";
+import ResponsiveNavbarHeader from "./components/ResponsiveNavbarHeader";
 import { useEffect, useState } from "react";
 
 function Header() {
     const loginColor = useColorMaterial('login')
     const [showHeader, setShowHeader] = useState(false)
+    //scroll add header
     useEffect(() => {
         const handleScrollAddHeader = () => {
             setShowHeader(window.scrollY >= 120)
@@ -24,6 +26,7 @@ function Header() {
     return (
         <header className={showHeader ? clsx(styles.scrollAnimation) : ""}>
             <div className={clsx(styles.container)}>
+                <ResponsiveNavbarHeader />
                 <Link to='/' className={clsx(styles.goHome)}>
                     <img className={clsx(styles.logo)} src={logo} alt="logo"></img>
                 </Link>

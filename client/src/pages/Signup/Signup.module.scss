@@ -138,3 +138,10 @@ $border-color: #222;
         }
     }
 }
+
+//responsive
+@media only screen and (min-width: 440px) and (max-width: 779px) {
+    .signupcard {
+        width: 40rem;
+    }
+}

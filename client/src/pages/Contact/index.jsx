@@ -81,7 +81,7 @@ function Contact() {
                         <p>example@gmail.com</p>
                     </div>
                 </Col>
-                <Col className={clsx(styles.right)} xs={8}>
+                <Col className={clsx(styles.right)} sm={12} xs={12} lg={8} xl={8} md={8}>
                     <h1>Send Your Message</h1>
                     <form action='#'>
                         <Row className={clsx(styles.sectionOne)}>

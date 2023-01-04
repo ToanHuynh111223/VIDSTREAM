@@ -16,10 +16,10 @@ function AboutUs() {
 
         <Container>
             <Row className={clsx(styles.row)}>
-                <Col className={clsx(styles.left)}>
+                <Col className={clsx(styles.left)} m={12} xs={12} lg={6} xl={6} md={6}>
                     <img src={imageAbout[0]} alt='about'></img>
                 </Col>
-                <Col className={clsx(styles.right)}>
+                <Col className={clsx(styles.right)} m={12} xs={12} lg={6} xl={6} md={6}>
                     <h1>Spend your boring time with us</h1>
                     <p>It is a long established fact that a reader will be distracted by the readable content of a page
                         when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
@@ -39,10 +39,10 @@ function AboutUs() {
                 </Col>
             </Row>
             <Row className={clsx(styles.row)}>
-                <Col className={clsx(styles.left)}>
+                <Col className={clsx(styles.left)} m={12} xs={12} lg={6} xl={6} md={6}>
                     <img src={imageAbout[1]} alt='about'></img>
                 </Col>
-                <Col className={clsx(styles.right)}>
+                <Col className={clsx(styles.right)} m={12} xs={12} lg={6} xl={6} md={6}>
                     <h1>Create profiles for kids.</h1>
                     <p>
                         Send kids on adventures with their favorite characters in a space made just for

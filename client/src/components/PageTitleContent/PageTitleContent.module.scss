@@ -33,3 +33,10 @@ $border-color: #222;
         }
     }
 }
+
+//responsive
+@media only screen and (min-width: 440px) and (max-width: 779px) {
+    .content {
+        padding-left: 1.5rem;
+    }
+}

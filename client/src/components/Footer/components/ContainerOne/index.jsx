@@ -45,7 +45,7 @@ function ContainerOne() {
     }
     return (
         <Row>
-            <Col className={clsx(styles.colstart)}>
+            <Col className={clsx(styles.colstart)} lg={3} md={4}>
                 <img className={clsx(styles.logo)} src={logo} alt="logo"></img>
                 <p className={clsx(styles.pleft)}>
                     It is a long established fact that a reader will be distracted by the readable content of a page
@@ -65,7 +65,7 @@ function ContainerOne() {
                     </a>
                 </div>
             </Col>
-            <Col className={clsx(styles.colcenter)}>
+            <Col className={clsx(styles.colcenter)} lg={3} md={4}>
                 <h2 className={clsx(styles.title)}>Quick Link</h2>
                 <ul>
                     <li><Link to="/about-us">
@@ -94,7 +94,7 @@ function ContainerOne() {
                     </li>
                 </ul>
             </Col>
-            <Col className={clsx(styles.colcenter)}>
+            <Col className={clsx(styles.colcenter)} lg={3} md={4}>
                 <h2 className={clsx(styles.title)}>Important Link</h2>
                 <ul>
                     <li><Link to="/*">
@@ -119,7 +119,7 @@ function ContainerOne() {
                     </li>
                 </ul>
             </Col>
-            <Col className={clsx(styles.colend)}>
+            <Col className={clsx(styles.colend)} lg={3} md={12}>
                 <h2 className={clsx(styles.title)}>Subscribe</h2>
                 <p>Subscribe our newsletter to get latest update & news.</p>
                 <form action="#">
