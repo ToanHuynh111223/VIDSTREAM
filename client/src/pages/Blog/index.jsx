@@ -21,7 +21,7 @@ function Blog() {
     return (
         <Container>
             <Row>
-                <Col xs={8} className={clsx(styles.colLeft)}>
+                <Col sm={12} xs={12} lg={8} xl={8} md={8} className={clsx(styles.colLeft)}>
                     <Swiper
                         slidesPerView={1}
                         spaceBetween={30}
@@ -39,7 +39,7 @@ function Blog() {
                                     data.map((blog, index) => {
                                         return (
                                             blog.id <= 6 &&
-                                            (<Col xs={6} key={index}>
+                                            (<Col sm={12} xs={12} lg={6} xl={6} md={6} key={index}>
                                                 <div className={clsx(styles.blogSingle)} >
                                                     <Link to={`/blog-details/${blog.id}`}>
                                                         <img src={blog.img} alt={blog.title}></img>
@@ -65,7 +65,7 @@ function Blog() {
                                     data.map((blog, index) => {
                                         return (
                                             blog.id >= 7 &&
-                                            (<Col xs={6} key={index}>
+                                            (<Col sm={12} xs={12} lg={6} xl={6} md={6} key={index}>
                                                 <div className={clsx(styles.blogSingle)} >
                                                     <Link to={`/blog-details/${blog.id}`}>
                                                         <img src={blog.img} alt={blog.title}></img>
@@ -87,7 +87,7 @@ function Blog() {
                         </SwiperSlide>
                     </Swiper>
                 </Col>
-                <Col xs={4} className={clsx(styles.colRight)}>
+                <Col sm={12} xs={12} lg={4} xl={4} md={4} className={clsx(styles.colRight)}>
                     <h1>Search</h1>
                     <input type="text" placeholder="Search" autoComplete="search" />
                     <h1>Category</h1>
