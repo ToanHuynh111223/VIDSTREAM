@@ -80,7 +80,7 @@ function ContainerOne() {
                         Tv Shows
                     </Link>
                     </li>
-                    <li><Link to="/*">
+                    <li><Link to="/privacy">
                         Privacy Policy
                     </Link>
                     </li>
@@ -101,7 +101,7 @@ function ContainerOne() {
                         Support
                     </Link>
                     </li>
-                    <li><Link to="/*">
+                    <li><Link to="/faq">
                         FAQ
                     </Link>
                     </li>
@@ -113,7 +113,7 @@ function ContainerOne() {
                         Latest News
                     </Link>
                     </li>
-                    <li><Link to="/*">
+                    <li><Link to="/pricing-plan">
                         Pricing Plan
                     </Link>
                     </li>

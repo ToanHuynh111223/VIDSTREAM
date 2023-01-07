@@ -23,7 +23,6 @@ function ResponsiveNavbarHeader() {
         setListChildren(document.querySelectorAll(".Header_menuResponsiveChildren__9rvwe"))
     }, [isShowListChildren, showNavbar])
     const onClickShowNavbar = () => {
-        // listChildren.filter((item) => { return item.className === "Header_menuResponsiveChildren__9rvwe Header_activeMenuChildren__5+gdA" }).className = clsx(styles.menuResponsiveChildren)
         setShowNavBar(!showNavbar)
     }
     const onClickShowListChildren = (index) => {

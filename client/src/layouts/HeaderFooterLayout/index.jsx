@@ -3,7 +3,7 @@ function HeaderFooterLayout({ children }) {
     return (
         <>
             <Header />
-            <div>
+            <div >
                 {children}
             </div>
             <Footer />

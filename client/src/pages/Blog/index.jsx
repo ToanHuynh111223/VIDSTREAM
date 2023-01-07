@@ -31,7 +31,6 @@ function Blog() {
                         }}
                         navigation={true}
                         modules={[Pagination, Navigation]}
-                        className="mySwiper"
                     >
                         <SwiperSlide>
                             <Row>

@@ -12,7 +12,10 @@ import {
     ResetPassword,
     SignIn,
     SignUp,
-    BlogDetails
+    BlogDetails,
+    Faq,
+    Privacy,
+    PricingPlan
 } from "../pages"
 export const publicRoutes = [
     { path: '/', component: Home, layout: HeaderFooterLayout },
@@ -22,6 +25,9 @@ export const publicRoutes = [
     { path: '/about-us', component: AboutUs },
     { path: '/reset-password', component: ResetPassword },
     { path: '/blog', component: Blog },
+    { path: '/faq', component: Faq },
+    { path: '/privacy', component: Privacy },
+    { path: '/pricing-plan', component: PricingPlan },
     { path: '/blog-details/:id', component: BlogDetails },
     { path: '*', component: PageNotFound, layout: HeaderFooterLayout },
     { path: '/myprofile', component: MyProfile, layout: HeaderOnly }

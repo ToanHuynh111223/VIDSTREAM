@@ -9,3 +9,6 @@ export { default as ResetPassword } from './ResetPassword';
 export { default as SignIn } from './SignIn';
 export { default as SignUp } from './SignUp';
 export { default as BlogDetails } from './BlogDetails'
+export { default as Faq } from './Faq'
+export { default as Privacy } from './Privacy'
+export { default as PricingPlan } from './PricingPlan'
