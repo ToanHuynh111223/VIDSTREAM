@@ -1,0 +1,32 @@
+//css swiper
+.swiper-button-prev {
+    color: #fff !important;
+    padding: 25px;
+    border: 1px solid transparent;
+
+    &:hover {
+        border: 1px solid #e50914;
+        border-radius: 50%;
+        padding: 25px;
+    }
+
+    &::after {
+        font-size: 3rem !important;
+    }
+}
+
+.swiper-button-next {
+    color: #fff !important;
+    padding: 25px;
+    border: 1px solid transparent;
+
+    &:hover {
+        border: 1px solid #e50914;
+        border-radius: 50%;
+        padding: 25px;
+    }
+
+    &::after {
+        font-size: 3rem !important;
+    }
+}

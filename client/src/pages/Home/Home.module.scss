@@ -1,0 +1,16 @@
+@media only screen and (min-width: 440px) and (max-width: 779px) {
+    .content {
+        h1 {
+            font-size: 3.2rem !important;
+        }
+
+        span {
+            font-size: 1rem !important;
+        }
+
+        p {
+            font-size: 1.2rem !important;
+            max-width: 70% !important;
+        }
+    }
+}

@@ -157,6 +157,18 @@
             "duration": "2h 10m",
             "quality": "HD",
             "content": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text."
+        },
+        {
+            "isOutStanding": true,
+            "id": 4,
+            "name": "transformers",
+            "img": "https://c.wallhere.com/photos/56/80/1920x1080_px_movies_Transformers-662772.jpg!d",
+            "actor": "Josh Duhamel, Bruce Willis, Rosario Dawson",
+            "genres": "Action, Drama, Thriller, Crime",
+            "director": "David Barrett",
+            "duration": "2h 10m",
+            "quality": "HD",
+            "content": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text."
         }
     ]
 }
