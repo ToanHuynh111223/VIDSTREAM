@@ -1,0 +1,48 @@
+.comedyMovie {
+
+    .viewAll {
+        color: #fff;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 4rem;
+        text-decoration: none;
+        transition: all 0.3s ease-out 0s;
+
+        &:hover {
+            color: #e50914;
+        }
+    }
+
+    .filmItem {
+        border-radius: 0.8rem;
+        background-color: #000;
+        width: 20rem;
+        margin-bottom: 3.5rem;
+
+        img {
+            width: 100%;
+            height: 11rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #fff;
+            font-weight: 600;
+            margin: 0 0 0.8rem 0;
+            cursor: default;
+            width: 18rem;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            transition: all 0.3s ease-out 0s;
+
+            &:hover {
+                color: #e50914
+            }
+
+        }
+
+
+    }
+}

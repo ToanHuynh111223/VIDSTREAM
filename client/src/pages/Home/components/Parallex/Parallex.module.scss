@@ -1,0 +1,38 @@
+.parallex {
+    width: 100%;
+    background: url("https://themes.themewild.com/vidstream/assets/images/parallax/p1.jpg") center center;
+    height: 100%;
+    padding: 100px 0;
+    position: relative;
+    background-size: cover;
+    background-attachment: fixed;
+
+    .content {
+        padding: 0 10rem;
+
+        h1 {
+            position: relative;
+            z-index: 999;
+            color: #fff;
+            font-size: 6rem;
+            font-weight: 700;
+            background: url("https://themes.themewild.com/vidstream/assets/images/texure.jpg");
+            background-repeat: repeat-x;
+            background-position: 100% 100%;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            content: "";
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.8);
+        }
+    }
+}
