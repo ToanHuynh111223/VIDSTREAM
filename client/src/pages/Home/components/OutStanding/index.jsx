@@ -96,7 +96,7 @@ function OutStanding() {
                     >
                       {menu.content}
                     </p>
-                    <Link style={{ textDecoration: "none" }}>
+                    <Link to={`/movie-details/${menu.name}`} style={{ textDecoration: "none" }}>
                       {" "}
                       <ThemeProvider theme={theme}>
                         <Button

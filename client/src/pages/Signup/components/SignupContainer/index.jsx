@@ -7,14 +7,27 @@ import { ThemeProvider } from "@mui/material/styles";
 //add hooks theme mui
 import useColorMaterial, { theme } from "../../../../hooks/useColorMaterial.js";
 //hooks react
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef} from "react";
 /* eslint-disable */
 const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+//redux
+import { useDispatch, useSelector, shallowEqual } from "react-redux";
+import {
+  setInputEmail,
+  setInputPassword,
+  setInputUserName,
+} from "../../../../features/SignUp/stateSignUpSlice";
 function SignupContainer() {
   const loginColor = useColorMaterial("login");
-  const [inputEmail, setInputEmail] = useState("");
-  const [inputPassword, setInputPassword] = useState("");
-  const [inputUserName, setInputUserName] = useState("");
+  const dispatch = useDispatch();
+  const { inputEmail, inputPassword, inputUserName } = useSelector((state) => {
+    return(
+    {
+      inputEmail: state.signUp.inputEmail,
+      inputPassword: state.signUp.inputPassword,
+      inputUserName: state.signUp.inputUserName
+    })
+  }, shallowEqual);
   const email = useRef();
   const password = useRef();
   const userName = useRef();
@@ -24,7 +37,7 @@ function SignupContainer() {
   }, []);
   //Register err when input === " "
   function onClickRegister() {
-    if (!inputEmail || !inputPassword) {
+    if (!inputEmail || !inputPassword || !inputUserName) {
       email.current.style.borderColor = "#e50914";
       password.current.style.borderColor = "#e50914";
       userName.current.style.borderColor = "#e50914";
@@ -48,10 +61,10 @@ function SignupContainer() {
             <input
               ref={userName}
               type="text"
-              placeholder="Enter email"
+              placeholder="Enter Full Name"
               autoComplete="full-name"
               value={inputUserName}
-              onChange={(e) => setInputUserName(e.target.value)}
+              onChange={(e) => dispatch(setInputUserName(e.target.value))}
             />
           </div>
           <div className={clsx(styles.formgroup)}>
@@ -62,7 +75,7 @@ function SignupContainer() {
               placeholder="Enter email"
               autoComplete="email"
               value={inputEmail}
-              onChange={(e) => setInputEmail(e.target.value)}
+              onChange={(e) => dispatch(setInputEmail(e.target.value))}
             />
           </div>
           <div className={clsx(styles.formgroup)}>
@@ -73,7 +86,7 @@ function SignupContainer() {
               placeholder="Password"
               autoComplete="current-password"
               value={inputPassword}
-              onChange={(e) => setInputPassword(e.target.value)}
+              onChange={(e) => dispatch(setInputPassword(e.target.value))}
             />
           </div>
         </form>

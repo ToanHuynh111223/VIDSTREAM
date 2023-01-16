@@ -30,7 +30,7 @@ export const publicRoutes = [
     { path: "/privacy", component: Privacy },
     { path: "/pricing-plan", component: PricingPlan },
     { path: "/blog-details/:id", component: BlogDetails },
-    { path: "/movie-details/:id", component: MovieDetails },
+    { path: "/movie-details/:name", component: MovieDetails },
     { path: "*", component: PageNotFound, layout: HeaderFooterLayout },
     { path: "/myprofile", component: MyProfile, layout: HeaderOnly },
 ];

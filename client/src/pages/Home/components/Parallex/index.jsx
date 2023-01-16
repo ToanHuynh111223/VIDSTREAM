@@ -110,7 +110,10 @@ function Parallex() {
                 </Button>
               </ThemeProvider>
             </Link>{" "}
-          </Col>{" "}
+          </Col>
+          <Col>
+          <img src="https://themes.themewild.com/vidstream/assets/images/parallax/p1.jpg" alt="avatar" />
+          </Col>
         </Row>
       </div>
     </div>

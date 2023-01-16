@@ -10,12 +10,11 @@ import useColorMaterial, { theme } from "../../hooks/useColorMaterial.js";
 //import component list menu (header)
 import NavbarHeader from "./components/NavbarHeader";
 import ResponsiveNavbarHeader from "./components/ResponsiveNavbarHeader";
-import { useEffect, useState } from "react";
+import { useEffect, useState} from "react";
 
 function Header() {
   const loginColor = useColorMaterial("login");
   const [showHeader, setShowHeader] = useState(false);
-  //scroll add header
   useEffect(() => {
     const handleScrollAddHeader = () => {
       setShowHeader(window.scrollY >= 120);

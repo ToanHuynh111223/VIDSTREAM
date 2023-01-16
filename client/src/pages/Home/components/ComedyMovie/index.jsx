@@ -88,7 +88,7 @@ function ComedyMovie() {
                             {movie.duration}
                           </p>
                         </div>
-                        <Link style={{ textDecoration: "none" }}>
+                        <Link to={`/movie-details/${movie.name}`} style={{ textDecoration: "none" }}>
                           <ThemeProvider theme={theme}>
                             <Button
                               variant="contained"

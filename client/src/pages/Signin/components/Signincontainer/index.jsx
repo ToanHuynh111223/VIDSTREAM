@@ -7,13 +7,24 @@ import { ThemeProvider } from "@mui/material/styles";
 //add hooks theme mui
 import useColorMaterial, { theme } from "../../../../hooks/useColorMaterial.js";
 //hooks react
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 /* eslint-disable */
 const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+//redux
+import { useDispatch, useSelector, shallowEqual } from "react-redux";
+import {
+  setInputEmail,
+  setInputPassword,
+} from "../../../../features/SignIn/stateSignInSlice";
 function SigninContainer() {
   const loginColor = useColorMaterial("login");
-  const [inputEmail, setInputEmail] = useState("");
-  const [inputPassword, setInputPassword] = useState("");
+  const dispatch = useDispatch();
+  const { inputEmail, inputPassword } = useSelector((state) => {
+    return {
+      inputEmail: state.signIn.inputEmail,
+      inputPassword: state.signIn.inputPassword,
+    };
+  }, shallowEqual);
   const email = useRef();
   const password = useRef();
   //scroll page when mount
@@ -48,7 +59,7 @@ function SigninContainer() {
               placeholder="Enter email"
               autoComplete="email"
               value={inputEmail}
-              onChange={(e) => setInputEmail(e.target.value)}
+              onChange={(e) => dispatch(setInputEmail(e.target.value))}
             />
           </div>
           <div className={clsx(styles.formgroup)}>
@@ -59,7 +70,7 @@ function SigninContainer() {
               placeholder="Password"
               autoComplete="current-password"
               value={inputPassword}
-              onChange={(e) => setInputPassword(e.target.value)}
+              onChange={(e) => dispatch(setInputPassword(e.target.value))}
             />
           </div>
         </form>
