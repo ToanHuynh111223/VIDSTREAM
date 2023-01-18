@@ -1,13 +1,84 @@
-@media only screen and (min-width: 780px) and (max-width: 1024px) {
-    .typePricingResponsive {
-        font-size: 1rem !important;
-        padding-left: 2px !important;
+.pricingPlan {
+  padding: 0 1.5rem;
+  margin: 0 8.1rem;
+  .wrapper {
+    background-color: #000;
+    width: 100%;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    overflow: auto;
+    .table {
+      width: 100%;
+      thead {
+        .theadColumnOne {
+          padding: 1.2rem;
+          width: 14%;
+        }
+        .theadColumnTwo {
+          padding: 1.2rem;
+          width: 20%;
+          .content {
+            padding: 1.5rem;
+            background-color: #fff;
+            border-radius: 0 0 4rem 4rem;
+            position: relative;
+            .cost {
+              padding-top: 2.4rem;
+              margin-bottom: 0.8rem;
+              font-size: 3rem;
+              font-weight: 700;
+              font-family: "Roboto", sans-serif;
+              text-align: center;
+              small {
+                font-size: 2rem;
+                font-weight: 500;
+              }
+            }
+            .typePricing {
+              width: 50%;
+              color: #fff;
+              font-size: 1.8rem;
+              font-weight: 700;
+              padding: 1rem 2.5rem;
+              background-color: #e50914;
+              border-radius: 0 0 2rem 2rem;
+              position: absolute;
+              left: 27%;
+              top: -1.5rem;
+            }
+          }
+        }
+      }
+      tbody {
+        .tbodyLeft {
+          color: #fff;
+          font-size: 1.7rem;
+          font-weight: 600;
+          padding: 1.2rem 0 1.2rem 0;
+          width: 15rem;
+          border-bottom: 1px solid #222;
+        }
+        .textCenter {
+          padding: 1.2rem;
+          width: 24rem;
+          color: #fff;
+          text-align: center;
+          border-bottom: 1px solid #222;
+        }
+      }
     }
+  }
+}
+@media only screen and (min-width: 780px) and (max-width: 1024px) {
+  .typePricingResponsive {
+    font-size: 1rem !important;
+    padding-left: 2px !important;
+  }
 }
 
 @media only screen and (min-width: 440px) and (max-width: 779px) {
-    .typePricingResponsive {
-        font-size: 1rem !important;
-        padding-left: 2px !important;
-    }
+  .typePricingResponsive {
+    font-size: 1rem !important;
+    padding-left: 2px !important;
+  }
 }

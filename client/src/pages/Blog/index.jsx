@@ -54,22 +54,9 @@ function Blog() {
                               <h1>{blog.title}</h1>
                             </Link>
                             <p
-                              style={{
-                                fontFamily: "'Roboto', sans-serif",
-                                margin: "0.8rem 0 1.6rem",
-                                color: "#d1d0cf",
-                                fontSize: "1.4rem",
-                                fontWeight: 500,
-                              }}
+                              className={clsx(styles.duration)}
                             >{`${blog.day} ${blog.month}, ${blog.year}`}</p>
-                            <p
-                              style={{
-                                color: "#d1d0cf",
-                                fontSize: "1.6rem",
-                                fontWeight: 500,
-                                marginBottom: "1.6rem",
-                              }}
-                            >
+                            <p className={clsx(styles.introduction)}>
                               {blog.introduction}
                             </p>
                           </div>
@@ -95,22 +82,9 @@ function Blog() {
                               <h1>{blog.title}</h1>
                             </Link>
                             <p
-                              style={{
-                                fontFamily: "'Roboto', sans-serif",
-                                margin: "0.8rem 0 1.6rem",
-                                color: "#d1d0cf",
-                                fontSize: "1.4rem",
-                                fontWeight: 500,
-                              }}
+                              className={clsx(styles.duration)}
                             >{`${blog.day} ${blog.month}, ${blog.year}`}</p>
-                            <p
-                              style={{
-                                color: "#d1d0cf",
-                                fontSize: "1.6rem",
-                                fontWeight: 500,
-                                marginBottom: "1.6rem",
-                              }}
-                            >
+                            <p className={clsx(styles.introduction)}>
                               {blog.introduction}
                             </p>
                           </div>

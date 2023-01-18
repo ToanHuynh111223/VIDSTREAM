@@ -16,67 +16,23 @@ import useColorMaterial, { theme } from "../../../../hooks/useColorMaterial";
 function Parallex() {
   const loginColor = useColorMaterial("login");
   return (
-    <div className={clsx(styles.parallex)} style={{ margin: " 4rem 0" }}>
+    <div className={clsx(styles.parallex)}>
       <div className={clsx(styles.content)}>
         <Row>
           <Col lg={4} xl={4}>
             <h1>AVATAR</h1>
-            <div
-              style={{
-                display: "flex",
-                color: "#DC0000",
-                zIndex: "999",
-                position: "relative",
-                margin: "1.6rem 0",
-              }}
-            >
+            <div className={clsx(styles.rate)}>
               <StarIcon fontSize="large" />
               <StarIcon fontSize="large" />
               <StarIcon fontSize="large" />
               <StarIcon fontSize="large" />
               <StarBorderIcon fontSize="large" />
             </div>
-            <div style={{ display: "flex", marginBottom: "1.6rem" }}>
-              <span
-                style={{
-                  fontFamily: "'Roboto', sans-serif",
-                  fontSize: "1.4rem",
-                  color: "#fff",
-                  fontWeight: 600,
-                  padding: "0.8rem",
-                  backgroundColor: "#6c757d",
-                  borderRadius: "0.8rem",
-                  zIndex: "999",
-                  position: "relative",
-                }}
-              >
-                100+
-              </span>
-              <p
-                style={{
-                  fontFamily: "'Roboto', sans-serif",
-                  fontSize: "1.8rem",
-                  color: "#fff",
-                  fontWeight: 500,
-                  margin: "0 0 0 1.6rem",
-                  lineHeight: "3.7rem",
-                  zIndex: "999",
-                  position: "relative",
-                }}
-              >
-                3h 10m
-              </p>
+            <div className={clsx(styles.info)}>
+              <span className={clsx(styles.badge)}>100+</span>
+              <p className={styles.duration}>3h 10m</p>
             </div>
-            <p
-              style={{
-                marginBottom: "1rem",
-                color: "#faebd7b0",
-                fontSize: "1.6rem",
-                fontWeight: 500,
-                zIndex: "999",
-                position: "relative",
-              }}
-            >
+            <p className={clsx(styles.introduction)}>
               It is a long established fact that a reader will be distracted by
               the readable content of a page when looking at its layout. The
               point of using Lorem Ipsum is that it has a more-or-less normal
@@ -112,7 +68,10 @@ function Parallex() {
             </Link>{" "}
           </Col>
           <Col>
-          <img src="https://themes.themewild.com/vidstream/assets/images/parallax/p1.jpg" alt="avatar" />
+            <img
+              src="https://themes.themewild.com/vidstream/assets/images/parallax/p1.jpg"
+              alt="avatar"
+            />
           </Col>
         </Row>
       </div>

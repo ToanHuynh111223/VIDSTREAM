@@ -1,0 +1,35 @@
+.content {
+  margin: 4rem 0;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid;
+  border-image-source: linear-gradient(
+    to left,
+    rgb(230, 10, 21, 0),
+    rgba(209, 208, 207, 0.6),
+    rgb(229, 9, 20, 0)
+  );
+  border-image-slice: 1;
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 2.4rem;
+    background: url(https://themes.themewild.com/vidstream/assets/images/texure.jpg);
+    background-clip: text;
+    background-repeat: repeat-x;
+    background-position: 100% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-font-smoothing: antialiased;
+  }
+  p{
+    color: #e50914;
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+    span{
+        color: #fff;
+        font-weight: 500;
+    }
+  }
+}

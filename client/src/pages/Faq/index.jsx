@@ -37,31 +37,16 @@ function Faq() {
     setIsShow(!isShow);
   };
   return (
-    <div style={{ padding: "0 1.5rem", margin: "0 8.1rem" }}>
+    <div className={clsx(styles.faq)}>
       {faq.map((item, index) => {
         return (
           <div
             onClick={() => onClickShowAnswer(index)}
             key={index}
-            style={{
-              marginBottom: "2.4rem",
-              backgroundColor: "#000",
-              padding: "1.2rem 2rem",
-              cursor: "pointer",
-              borderRadius: "4px",
-            }}
+            className={clsx(styles.wrapper)}
           >
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                color: "#fff",
-                padding: "1rem 3rem",
-              }}
-            >
-              <h2 style={{ fontSize: "1.8rem", fontWeight: 500 }}>
-                {item.question}
-              </h2>
+            <div className={clsx(styles.question)}>
+              <h2>{item.question}</h2>
               <KeyboardArrowDownIcon fontSize="large" />
             </div>
             <div className={clsx(styles.answer)}>{item.answer}</div>

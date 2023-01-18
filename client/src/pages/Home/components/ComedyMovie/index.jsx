@@ -23,26 +23,10 @@ function ComedyMovie() {
   return (
     <div className={clsx(styles.comedyMovie)} style={{ margin: " 4rem 0" }}>
       <Container>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            marginBottom: "1.6rem",
-          }}
-        >
+        <div className={clsx(styles.header)}>
           <div style={{ display: "flex" }}>
             <MovieFilterIcon sx={{ fontSize: 40, color: "#e50914" }} />
-            <h1
-              style={{
-                color: "#fff",
-                fontSize: "3rem",
-                fontWeight: 700,
-                margin: "0 0 0 0.4rem",
-                lineHeight: "4rem",
-              }}
-            >
-              Comedy Movies
-            </h1>
+            <h1 className={clsx(styles.title)}>Comedy Movies</h1>
           </div>
           <Link className={clsx(styles.viewAll)}>View all</Link>
         </div>
@@ -55,40 +39,18 @@ function ComedyMovie() {
                   <Col key={index}>
                     <div className={clsx(styles.filmItem)}>
                       <img src={movie.img} alt={movie.name} />
-                      <div style={{ padding: "1.6rem", width: "100%" }}>
+                      <div className={clsx(styles.wrapper)}>
                         <h2 title={movie.name}>{movie.name}</h2>
-                        <div
-                          style={{
-                            display: "flex",
-                            fontFamily: "'Roboto', sans-serif",
-                            marginBottom: "2rem",
-                          }}
-                        >
-                          <span
-                            style={{
-                              fontSize: "1.2rem",
-                              color: "#fff",
-                              fontWeight: 600,
-                              padding: "0.6rem",
-                              backgroundColor: "#e50914",
-                              borderRadius: "0.8rem",
-                            }}
-                          >
-                            {movie.age}
-                          </span>
-                          <p
-                            style={{
-                              fontSize: "1.6rem",
-                              color: "#fff",
-                              fontWeight: 500,
-                              margin: "0 0 0 1.6rem",
-                              lineHeight: "3.7rem",
-                            }}
-                          >
+                        <div className={clsx(styles.content)}>
+                          <span className={clsx(styles.age)}>{movie.age}</span>
+                          <p className={clsx(styles.duration)}>
                             {movie.duration}
                           </p>
                         </div>
-                        <Link to={`/movie-details/${movie.name}`} style={{ textDecoration: "none" }}>
+                        <Link
+                          to={`/movie-details/${movie.name}`}
+                          style={{ textDecoration: "none" }}
+                        >
                           <ThemeProvider theme={theme}>
                             <Button
                               variant="contained"
