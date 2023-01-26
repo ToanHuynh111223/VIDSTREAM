@@ -13,5 +13,6 @@ export { default as Faq } from "./Faq";
 export { default as MovieDetails } from "./MovieDetails";
 export { default as Privacy } from "./Privacy";
 export { default as PricingPlan } from "./PricingPlan";
-export { default as ActionMovie } from "./ActionMovie";
-export { default as ComedyMovie } from "./ComedyMovie";
+export { default as ActionMovies } from "./ActionMovies";
+export { default as ComedyMovies } from "./ComedyMovies";
+export { default as Search } from "./Search";

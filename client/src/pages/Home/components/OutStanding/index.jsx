@@ -33,7 +33,6 @@ function OutStanding() {
       >
         {data.map((menu, index) => {
           return (
-            menu.isOutStanding && (
               <SwiperSlide key={index}>
                 <div className={clsx(styles.wrapper)}>
                   <div className={clsx(styles.overlay)}></div>
@@ -45,7 +44,7 @@ function OutStanding() {
                     </span>
                     <p>{menu.content}</p>
                     <Link
-                      to={`/movie-details/${menu.name}`}
+                      to={`/movie-details/${menu.name}${menu.id}`}
                       style={{ textDecoration: "none" }}
                     >
                       {" "}
@@ -72,7 +71,6 @@ function OutStanding() {
                   </div>
                 </div>
               </SwiperSlide>
-            )
           );
         })}
       </Swiper>

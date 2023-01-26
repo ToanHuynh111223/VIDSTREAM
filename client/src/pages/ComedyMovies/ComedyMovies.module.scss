@@ -1,0 +1,59 @@
+.comedyMovie {
+  
+    .filmItem {
+      border-radius: 0.8rem;
+      background-color: #000;
+      width: 20rem;
+      margin-bottom: 3.5rem;
+  
+      img {
+        width: 100%;
+        height: 11rem;
+      }
+      .wrapper {
+        padding: 1.6rem;
+        width: 100%;
+        h2 {
+          font-size: 2rem;
+          color: #fff;
+          font-weight: 600;
+          margin: 0 0 0.8rem 0;
+          cursor: default;
+          width: 18rem;
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          transition: all 0.3s ease-out 0s;
+          font-family: "Roboto", sans-serif;
+          &:hover {
+            color: #e50914;
+          }
+        }
+        .content {
+          display: flex;
+          font-family: "Roboto", sans-serif;
+          margin-bottom: 2rem;
+          .age {
+            font-size: 1.2rem;
+            color: #fff;
+            font-weight: 600;
+            padding: 0.6rem;
+            background-color: #e50914;
+            border-radius: 0.8rem;
+          }
+          .duration {
+            font-size: 1.6rem;
+            color: #fff;
+            font-weight: 500;
+            margin: 0 0 0 1.6rem;
+            line-height: 3.7rem;
+          }
+        }
+      }
+    }
+    
+  }
+  
+  
+ 

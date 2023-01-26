@@ -67,7 +67,7 @@ function Parallex() {
               </ThemeProvider>
             </Link>{" "}
           </Col>
-          <Col>
+          <Col className={clsx(styles.colRight)}>
             <img
               src="https://themes.themewild.com/vidstream/assets/images/parallax/p1.jpg"
               alt="avatar"

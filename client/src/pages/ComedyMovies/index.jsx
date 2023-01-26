@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
-import styles from "./ActionMovie.module.scss";
-import clsx from "clsx";
+import styles from "./ComedyMovies.module.scss"
+import clsx from "clsx"
+import {Link} from "react-router-dom"
+import { useState } from "react";
 // Bootstrap CSS
 import "bootstrap/dist/css/bootstrap.min.css";
 import Row from "react-bootstrap/Row";
@@ -8,33 +9,33 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 //import icon mui
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
-import MovieFilterIcon from "@mui/icons-material/MovieFilter";
-
 //import material-ui
 import { Button } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 //add hooks theme mui
-import useColorMaterial, { theme } from "../../../../hooks/useColorMaterial";
+import useColorMaterial, {theme} from "../../hooks/useColorMaterial";
 //import useAxios
-import useAxios from "../../../../hooks/useAxios";
-function ActionMovie() {
-  const data = useAxios("http://localhost:8000/actionMovies", "GET");
-  const loginColor = useColorMaterial("login");
-  return (
-    <div className={clsx(styles.actionMovie)} style={{ margin: " 4rem 0" }}>
+import useAxios from "../../hooks/useAxios";
+import ReactPaginate from "react-paginate";
+function ComedyMovies() {
+    const data = useAxios("http://localhost:8000/comedyMovies", "GET");
+    const loginColor = useColorMaterial("login");
+    const [pageNumber, setPageNumber] = useState(0);
+    const usersPerPage = 20;
+    const pagesVisited = pageNumber * usersPerPage;
+    const pageCount = Math.ceil(data.length / usersPerPage);
+
+  const changePage = ({ selected }) => {
+    setPageNumber(selected);
+  };
+    return ( 
+        <div className={clsx(styles.comedyMovie)} style={{ margin: " 4rem 0" }}>
       <Container>
-        <div className={clsx(styles.header)}>
-          <div style={{ display: "flex" }}>
-            <MovieFilterIcon sx={{ fontSize: 40, color: "#e50914" }} />
-            <h1 className={clsx(styles.title)}>Action Movies</h1>
-          </div>
-          <Link className={clsx(styles.viewAll)} to="/action">View all</Link>
-        </div>
         <Row>
           {data
+          .slice(pagesVisited, pagesVisited + usersPerPage)
             .map((movie, index) => {
               return (
-                index < 10 && (
                   <Col key={index}>
                     <div className={clsx(styles.filmItem)}>
                       <img src={movie.img} alt={movie.name} />
@@ -73,13 +74,23 @@ function ActionMovie() {
                       </div>
                     </div>
                   </Col>
-                )
               );
             })}
         </Row>
+        <ReactPaginate
+        previousLabel={"Previous"}
+        nextLabel={"Next"}
+        pageCount={pageCount}
+        onPageChange={changePage}
+        containerClassName={"paginationBttns"}
+        previousLinkClassName={"previousBttn"}
+        nextLinkClassName={"nextBttn"}
+        disabledClassName={"paginationDisabled"}
+        activeClassName={"paginationActive"}
+      />
       </Container>
     </div>
-  );
+     );
 }
 
-export default ActionMovie;
+export default ComedyMovies;

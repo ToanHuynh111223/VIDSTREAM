@@ -5,12 +5,13 @@ import OutStanding from "./components/OutStanding";
 import ActionMovie from "./components/ActionMovie";
 import ComedyMovie from "./components/ComedyMovie";
 import Parallex from "./components/Parallex";
+import { SearchMovies } from "../../components";
 function Home() {
 
     return (
         <>
             <OutStanding />
-
+            <SearchMovies/>
             <ActionMovie />
             <ComedyMovie />
             <Parallex />

@@ -1,0 +1,34 @@
+.paginationBttns {
+    padding: 0;
+    width: 100%;
+    height: 40px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.6rem;
+    a{
+        font-family: "Roboto", sans-serif;
+        font-size: 1.6rem;
+        text-decoration: none;
+        padding: 10px;
+        margin: 8px;
+        border-radius: 5px;
+        border: 1px solid #e50914;
+        color: #fff !important;
+        cursor: pointer;
+        &:hover{
+            color: white;
+            background-color: #e50914;
+        }
+    }
+  }
+  
+  .paginationActive a {
+    color: white;
+    background-color: #e50914;
+  }
+  
+  .paginationDisabled a {
+    color: grey;
+    background-color: grey;
+  }

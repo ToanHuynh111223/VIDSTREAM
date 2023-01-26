@@ -18,7 +18,7 @@ import useColorMaterial, { theme } from "../../../../hooks/useColorMaterial";
 //import useAxios
 import useAxios from "../../../../hooks/useAxios";
 function ComedyMovie() {
-  const data = useAxios("http://localhost:8000/movies", "GET");
+  const data = useAxios("http://localhost:8000/comedyMovies", "GET");
   const loginColor = useColorMaterial("login");
   return (
     <div className={clsx(styles.comedyMovie)} style={{ margin: " 4rem 0" }}>
@@ -28,14 +28,12 @@ function ComedyMovie() {
             <MovieFilterIcon sx={{ fontSize: 40, color: "#e50914" }} />
             <h1 className={clsx(styles.title)}>Comedy Movies</h1>
           </div>
-          <Link className={clsx(styles.viewAll)}>View all</Link>
+          <Link className={clsx(styles.viewAll)} to="/comedy">View all</Link>
         </div>
         <Row>
-          {data
-            .filter((movie) => movie.isComedyMovies)
-            .map((movie, index) => {
+          {data.map((movie, index) => {
               return (
-                index <= 10 && (
+                index < 5 && (
                   <Col key={index}>
                     <div className={clsx(styles.filmItem)}>
                       <img src={movie.img} alt={movie.name} />
@@ -48,7 +46,7 @@ function ComedyMovie() {
                           </p>
                         </div>
                         <Link
-                          to={`/movie-details/${movie.name}`}
+                          to={`/movie-details/${movie.name}${movie.id}`}
                           style={{ textDecoration: "none" }}
                         >
                           <ThemeProvider theme={theme}>

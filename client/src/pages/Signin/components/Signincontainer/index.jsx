@@ -42,6 +42,7 @@ function SigninContainer() {
         password.current.style.borderColor = "#fff";
       } else {
         email.current.style.borderColor = "#fff";
+        password.current.style.borderColor = "#fff";
       }
     }
   }

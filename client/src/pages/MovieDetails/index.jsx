@@ -17,14 +17,17 @@ import useColorMaterial, { theme } from "../../hooks/useColorMaterial";
 //import icon mui
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 function MovieDetails() {
-  const data = useAxios("http://localhost:8000/movies", "GET");
+  const dataMovies = useAxios("http://localhost:8000/movies", "GET");
+  const dataActionMovies = useAxios("http://localhost:8000/actionMovies", "GET");
+  const dataComedyMovies = useAxios("http://localhost:8000/comedyMovies", "GET");
+  const data = [...dataMovies, ...dataActionMovies, ...dataComedyMovies ]
   const namePath = useParams();
   const loginColor = useColorMaterial("login");
   return (
     <Container>
       {data
         .filter((movie) => {
-          return movie.name === namePath.name;
+          return `${movie.name}${movie.id}` === namePath.name;
         })
         .map((movie, index) => {
           return (

@@ -17,8 +17,9 @@ import {
     Faq,
     Privacy,
     PricingPlan,
-    ComedyMovie,
-    ActionMovie
+    ComedyMovies,
+    ActionMovies,
+    Search
 } from "../pages";
 export const publicRoutes = [
     { path: "/", component: Home, layout: HeaderFooterLayout },
@@ -31,8 +32,9 @@ export const publicRoutes = [
     { path: "/faq", component: Faq },
     { path: "/privacy", component: Privacy },
     { path: "/pricing-plan", component: PricingPlan },
-    { path: "/action", component: ActionMovie },
-    { path: "/comedy", component: ComedyMovie },
+    { path: "/action", component: ActionMovies },
+    { path: "/comedy", component: ComedyMovies },
+    { path: "/search", component: Search },
     { path: "/blog-details/:id", component: BlogDetails },
     { path: "/movie-details/:name", component: MovieDetails },
     { path: "*", component: PageNotFound, layout: HeaderFooterLayout },
