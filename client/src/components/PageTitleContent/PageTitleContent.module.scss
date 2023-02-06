@@ -23,9 +23,14 @@ $border-color: #222;
         font-size: 1.6rem;
         padding: 1.2rem 1.6rem 1.2rem 0;
 
-        span {
+        a {
             padding-right: 0.8rem;
-            color: $text-color
+            color: $text-color;
+            text-decoration: none;
+            transition: all 0.5s ease-out 0s;
+            &:hover{
+                color: $text-color-active;
+            }
         }
 
         p {

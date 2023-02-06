@@ -49,3 +49,30 @@
     }
   }
 }
+
+@media only screen and (min-width: 440px) and (max-width: 779px) {
+  .wrapper{
+
+    .content{
+      h1{
+        font-size: 3.5rem;
+      }
+      p{
+        max-width: 100%;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 780px) and (max-width: 1024px) {
+  .wrapper{
+
+    .content{
+      h1{
+        font-size: 4.5rem;
+      }
+      p{
+        max-width: 50%;
+      }
+    }
+  }
+}

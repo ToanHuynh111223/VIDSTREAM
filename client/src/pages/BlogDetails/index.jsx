@@ -14,7 +14,7 @@ import Col from 'react-bootstrap/Col';
 import { useEffect } from "react";
 
 function BlogDetails() {
-    const data = useAxios("http://localhost:8000/blogs", "GET");
+    const data = useAxios("https://www.mockly.app/api/7a35590a-0724-43d0-b7f4-bd1799be185a/blogs", "GET");
     const { id } = useParams()
     useEffect(() => {
         window.scrollTo(0, 400)

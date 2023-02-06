@@ -21,13 +21,13 @@ import ReactPaginate from "react-paginate";
 function Search() {
   const [searchParams] = useSearchParams();
   const q = searchParams.get("q");
-  const dataMovies = useAxios("http://localhost:8000/movies", "GET");
+  const dataMovies = useAxios("https://www.mockly.app/api/7a35590a-0724-43d0-b7f4-bd1799be185a/movies", "GET");
   const dataActionMovies = useAxios(
-    "http://localhost:8000/actionMovies",
+    "https://www.mockly.app/api/7a35590a-0724-43d0-b7f4-bd1799be185a/actionMovies",
     "GET"
   );
   const dataComedyMovies = useAxios(
-    "http://localhost:8000/comedyMovies",
+    "https://www.mockly.app/api/7a35590a-0724-43d0-b7f4-bd1799be185a/comedyMovies",
     "GET"
   );
   const data = [...dataMovies, ...dataActionMovies, ...dataComedyMovies];

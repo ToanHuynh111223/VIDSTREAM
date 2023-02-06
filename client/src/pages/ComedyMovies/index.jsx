@@ -18,7 +18,7 @@ import useColorMaterial, {theme} from "../../hooks/useColorMaterial";
 import useAxios from "../../hooks/useAxios";
 import ReactPaginate from "react-paginate";
 function ComedyMovies() {
-    const data = useAxios("http://localhost:8000/comedyMovies", "GET");
+    const data = useAxios("https://www.mockly.app/api/7a35590a-0724-43d0-b7f4-bd1799be185a/comedyMovies", "GET");
     const loginColor = useColorMaterial("login");
     const [pageNumber, setPageNumber] = useState(0);
     const usersPerPage = 20;

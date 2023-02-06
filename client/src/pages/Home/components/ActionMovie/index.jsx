@@ -18,7 +18,7 @@ import useColorMaterial, { theme } from "../../../../hooks/useColorMaterial";
 //import useAxios
 import useAxios from "../../../../hooks/useAxios";
 function ActionMovie() {
-  const data = useAxios("http://localhost:8000/actionMovies", "GET");
+  const data = useAxios("https://www.mockly.app/api/7a35590a-0724-43d0-b7f4-bd1799be185a/actionMovies", "GET");
   const loginColor = useColorMaterial("login");
   return (
     <div className={clsx(styles.actionMovie)} style={{ margin: " 4rem 0" }}>

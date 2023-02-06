@@ -1,5 +1,6 @@
 import styles from "./PageTitleContent.module.scss";
 import { clsx } from "clsx";
+import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { useEffect, useState, memo } from "react";
 function PageTitleContent() {
@@ -23,7 +24,9 @@ function PageTitleContent() {
             .replace("-", " ")}
       </h2>
       <div className={clsx(styles.breadcrumb)}>
-        <span>Home</span>
+        <Link to="/">
+        Home
+        </Link>
         <p>
           <span>/</span>
           {title.charAt(1).toUpperCase() +

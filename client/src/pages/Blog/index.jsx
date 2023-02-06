@@ -17,7 +17,7 @@ import "swiper/css/navigation";
 // import required modules
 import { Pagination, Navigation } from "swiper";
 function Blog() {
-  const data = useAxios("http://localhost:8000/blogs", "GET");
+  const data = useAxios("https://www.mockly.app/api/7a35590a-0724-43d0-b7f4-bd1799be185a/blogs", "GET");
   return (
     <Container>
       <Row>

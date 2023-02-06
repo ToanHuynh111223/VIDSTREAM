@@ -20,7 +20,7 @@ import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 //import useAxios
 import useAxios from "../../../../hooks/useAxios";
 function OutStanding() {
-  const data = useAxios("http://localhost:8000/movies", "GET");
+  const data = useAxios("https://www.mockly.app/api/7a35590a-0724-43d0-b7f4-bd1799be185a/movies", "GET");
   const loginColor = useColorMaterial("login");
   return (
     <div className={clsx(styles.outStanding)}>
